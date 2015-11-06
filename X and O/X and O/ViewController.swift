@@ -12,6 +12,8 @@ import SpriteKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var particleView: SKView!
+    //TODO: Rename particle view to backgroundView
+    //TODO: Make particleView a subclass of BackGroundView
     
     override func viewDidLoad() {
         super.viewDidLoad()

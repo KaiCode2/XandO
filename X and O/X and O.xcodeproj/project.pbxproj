@@ -46,6 +46,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC2305531BEC8C1F00B74E16 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB00861BE1EA2B001182FF /* Assets.xcassets */,
+				ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */,
+				AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */,
+				ACEB00921BE1EB30001182FF /* spark.png */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		AC2305541BEC8C4800B74E16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC2305511BEC875F00B74E16 /* BackGroundView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AC2305551BEC8C5100B74E16 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB00811BE1EA2B001182FF /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		ACEB00731BE1EA2B001182FF = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */,
-				ACEB00811BE1EA2B001182FF /* ViewController.swift */,
-				AC2305511BEC875F00B74E16 /* BackGroundView.swift */,
 				ACEB00831BE1EA2B001182FF /* Main.storyboard */,
-				ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */,
-				AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */,
-				ACEB00921BE1EB30001182FF /* spark.png */,
+				AC2305551BEC8C5100B74E16 /* ViewControllers */,
+				AC2305541BEC8C4800B74E16 /* Views */,
+				AC2305531BEC8C1F00B74E16 /* Graphics */,
 				ACEB00971BE1EB68001182FF /* Suporting files */,
 			);
 			path = "X and O";
@@ -80,7 +105,6 @@
 		ACEB00971BE1EB68001182FF /* Suporting files */ = {
 			isa = PBXGroup;
 			children = (
-				ACEB00861BE1EA2B001182FF /* Assets.xcassets */,
 				ACEB00981BE1EB86001182FF /* Frameworks */,
 				ACEB00881BE1EA2B001182FF /* LaunchScreen.storyboard */,
 				ACEB008B1BE1EA2B001182FF /* Info.plist */,

@@ -12,6 +12,9 @@
 		ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00831BE1EA2B001182FF /* Main.storyboard */; };
 		ACEB00871BE1EA2B001182FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00861BE1EA2B001182FF /* Assets.xcassets */; };
 		ACEB008A1BE1EA2B001182FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00881BE1EA2B001182FF /* LaunchScreen.storyboard */; };
+		ACEB00931BE1EB30001182FF /* BackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00911BE1EB30001182FF /* BackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
+		ACEB00941BE1EB30001182FF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00921BE1EB30001182FF /* spark.png */; settings = {ASSET_TAGS = (); }; };
+		ACEB00961BE1EB5D001182FF /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEB00951BE1EB5D001182FF /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		ACEB00861BE1EA2B001182FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACEB00891BE1EA2B001182FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACEB008B1BE1EA2B001182FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACEB00911BE1EB30001182FF /* BackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BackgroundParticle.sks; sourceTree = "<group>"; };
+		ACEB00921BE1EB30001182FF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		ACEB00951BE1EB5D001182FF /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEB00961BE1EB5D001182FF /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,11 +64,30 @@
 				ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */,
 				ACEB00811BE1EA2B001182FF /* ViewController.swift */,
 				ACEB00831BE1EA2B001182FF /* Main.storyboard */,
+				ACEB00911BE1EB30001182FF /* BackgroundParticle.sks */,
+				ACEB00921BE1EB30001182FF /* spark.png */,
+				ACEB00971BE1EB68001182FF /* Suporting files */,
+			);
+			path = "X and O";
+			sourceTree = "<group>";
+		};
+		ACEB00971BE1EB68001182FF /* Suporting files */ = {
+			isa = PBXGroup;
+			children = (
 				ACEB00861BE1EA2B001182FF /* Assets.xcassets */,
+				ACEB00981BE1EB86001182FF /* Frameworks */,
 				ACEB00881BE1EA2B001182FF /* LaunchScreen.storyboard */,
 				ACEB008B1BE1EA2B001182FF /* Info.plist */,
 			);
-			path = "X and O";
+			name = "Suporting files";
+			sourceTree = "<group>";
+		};
+		ACEB00981BE1EB86001182FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB00951BE1EB5D001182FF /* SpriteKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +148,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEB00941BE1EB30001182FF /* spark.png in Resources */,
 				ACEB008A1BE1EA2B001182FF /* LaunchScreen.storyboard in Resources */,
+				ACEB00931BE1EB30001182FF /* BackgroundParticle.sks in Resources */,
 				ACEB00871BE1EA2B001182FF /* Assets.xcassets in Resources */,
 				ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */,
 			);

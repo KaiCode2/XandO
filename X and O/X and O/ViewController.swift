@@ -15,31 +15,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        let path = NSBundle.mainBundle().pathForResource("BackgroundParticle", ofType: "sks")
+        
+        let path = NSBundle.mainBundle().pathForResource("BlueBackgroundParticle", ofType: "sks")
         let emmiterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(path!) as! SKNode
         print(emmiterNode.frame)
         
-        let scene = SKScene(size: CGSize(width: view.frame.width / 2, height: view.frame.height / 2))
-        scene.addChild(emmiterNode)
-        scene.scaleMode = .AspectFit
-        print(scene.frame)
+        let bluleScene = SKScene(size: CGSize(width: 1000, height: 1000))
+        bluleScene.addChild(emmiterNode)
+        bluleScene.scaleMode = .AspectFit
         
-        particleView.presentScene(scene)
+        print(bluleScene.frame)
+        
+        particleView.showsFPS = true
+        particleView.showsNodeCount = true
+        particleView.presentScene(bluleScene)
         print(particleView.frame)
     }
-    
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

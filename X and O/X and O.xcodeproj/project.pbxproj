@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC2305501BEC873300B74E16 /* RedBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
+		AC2305521BEC875F00B74E16 /* BackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305511BEC875F00B74E16 /* BackGroundView.swift */; settings = {ASSET_TAGS = (); }; };
 		ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */; };
 		ACEB00821BE1EA2B001182FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB00811BE1EA2B001182FF /* ViewController.swift */; };
 		ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00831BE1EA2B001182FF /* Main.storyboard */; };
 		ACEB00871BE1EA2B001182FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00861BE1EA2B001182FF /* Assets.xcassets */; };
 		ACEB008A1BE1EA2B001182FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00881BE1EA2B001182FF /* LaunchScreen.storyboard */; };
-		ACEB00931BE1EB30001182FF /* BackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00911BE1EB30001182FF /* BackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
+		ACEB00931BE1EB30001182FF /* BlueBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
 		ACEB00941BE1EB30001182FF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00921BE1EB30001182FF /* spark.png */; settings = {ASSET_TAGS = (); }; };
 		ACEB00961BE1EB5D001182FF /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEB00951BE1EB5D001182FF /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RedBackgroundParticle.sks; sourceTree = "<group>"; };
+		AC2305511BEC875F00B74E16 /* BackGroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundView.swift; sourceTree = "<group>"; };
 		ACEB007C1BE1EA2B001182FF /* X and O.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X and O.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACEB00811BE1EA2B001182FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +29,7 @@
 		ACEB00861BE1EA2B001182FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACEB00891BE1EA2B001182FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACEB008B1BE1EA2B001182FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACEB00911BE1EB30001182FF /* BackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BackgroundParticle.sks; sourceTree = "<group>"; };
+		ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlueBackgroundParticle.sks; sourceTree = "<group>"; };
 		ACEB00921BE1EB30001182FF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		ACEB00951BE1EB5D001182FF /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -63,8 +67,10 @@
 			children = (
 				ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */,
 				ACEB00811BE1EA2B001182FF /* ViewController.swift */,
+				AC2305511BEC875F00B74E16 /* BackGroundView.swift */,
 				ACEB00831BE1EA2B001182FF /* Main.storyboard */,
-				ACEB00911BE1EB30001182FF /* BackgroundParticle.sks */,
+				ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */,
+				AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */,
 				ACEB00921BE1EB30001182FF /* spark.png */,
 				ACEB00971BE1EB68001182FF /* Suporting files */,
 			);
@@ -150,7 +156,8 @@
 			files = (
 				ACEB00941BE1EB30001182FF /* spark.png in Resources */,
 				ACEB008A1BE1EA2B001182FF /* LaunchScreen.storyboard in Resources */,
-				ACEB00931BE1EB30001182FF /* BackgroundParticle.sks in Resources */,
+				ACEB00931BE1EB30001182FF /* BlueBackgroundParticle.sks in Resources */,
+				AC2305501BEC873300B74E16 /* RedBackgroundParticle.sks in Resources */,
 				ACEB00871BE1EA2B001182FF /* Assets.xcassets in Resources */,
 				ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */,
 			);
@@ -163,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2305521BEC875F00B74E16 /* BackGroundView.swift in Sources */,
 				ACEB00821BE1EA2B001182FF /* ViewController.swift in Sources */,
 				ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */,
 			);
@@ -314,6 +322,7 @@
 				ACEB00901BE1EA2B001182FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

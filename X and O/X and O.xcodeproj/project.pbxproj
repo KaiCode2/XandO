@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		AC2305501BEC873300B74E16 /* RedBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
 		AC2305521BEC875F00B74E16 /* BackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305511BEC875F00B74E16 /* BackGroundView.swift */; settings = {ASSET_TAGS = (); }; };
+		AC2305571BEEB40800B74E16 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AC2305591BEEBA2800B74E16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305581BEEBA2800B74E16 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AC23055B1BEEC2C100B74E16 /* HomeBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
 		ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */; };
-		ACEB00821BE1EA2B001182FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB00811BE1EA2B001182FF /* ViewController.swift */; };
 		ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00831BE1EA2B001182FF /* Main.storyboard */; };
 		ACEB00871BE1EA2B001182FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00861BE1EA2B001182FF /* Assets.xcassets */; };
 		ACEB008A1BE1EA2B001182FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00881BE1EA2B001182FF /* LaunchScreen.storyboard */; };
@@ -22,9 +24,11 @@
 /* Begin PBXFileReference section */
 		AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RedBackgroundParticle.sks; sourceTree = "<group>"; };
 		AC2305511BEC875F00B74E16 /* BackGroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundView.swift; sourceTree = "<group>"; };
+		AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
+		AC2305581BEEBA2800B74E16 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HomeBackgroundParticle.sks; sourceTree = "<group>"; };
 		ACEB007C1BE1EA2B001182FF /* X and O.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X and O.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACEB00811BE1EA2B001182FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ACEB00841BE1EA2B001182FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACEB00861BE1EA2B001182FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACEB00891BE1EA2B001182FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 				ACEB00861BE1EA2B001182FF /* Assets.xcassets */,
 				ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */,
 				AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */,
+				AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */,
 				ACEB00921BE1EB30001182FF /* spark.png */,
 			);
 			name = Graphics;
@@ -68,7 +73,8 @@
 		AC2305551BEC8C5100B74E16 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ACEB00811BE1EA2B001182FF /* ViewController.swift */,
+				AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */,
+				AC2305581BEEBA2800B74E16 /* HomeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +189,7 @@
 				ACEB00931BE1EB30001182FF /* BlueBackgroundParticle.sks in Resources */,
 				AC2305501BEC873300B74E16 /* RedBackgroundParticle.sks in Resources */,
 				ACEB00871BE1EA2B001182FF /* Assets.xcassets in Resources */,
+				AC23055B1BEEC2C100B74E16 /* HomeBackgroundParticle.sks in Resources */,
 				ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,9 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2305571BEEB40800B74E16 /* BackgroundViewController.swift in Sources */,
 				AC2305521BEC875F00B74E16 /* BackGroundView.swift in Sources */,
-				ACEB00821BE1EA2B001182FF /* ViewController.swift in Sources */,
 				ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */,
+				AC2305591BEEBA2800B74E16 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,35 +8,50 @@
 
 import SpriteKit
 
-class BackGroundView: SKView {
+final class BackGroundView: SKView {
+    
     private class BackgroundScenes {
+        
         class var HomeScene: SKScene {
-            //TODO: make an SKScene that transitions between red and blue
-            return SKScene()
+            let path = NSBundle.mainBundle().pathForResource("HomeBackgroundParticle", ofType: "sks")
+            
+            guard (path != nil) else {
+                fatalError("file: HomeBackgroundParticle.sks was not found by \(self), aborting!")
+            }
+            
+            let emmiterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(path!) as! SKNode
+            
+            let homeScene = SKScene(size: CGSize(width: 150, height: 240))
+            homeScene.addChild(emmiterNode)
+            homeScene.scaleMode = .AspectFit
+            return homeScene
         }
         
         class var BlueScene: SKScene {
             let path = NSBundle.mainBundle().pathForResource("BlueBackgroundParticle", ofType: "sks")
             
-            guard (path != nil) else { fatalError("file: BlueBackgroundParticle.sks was not found by \(self), aborting!") }
+            guard (path != nil) else {
+                fatalError("file: BlueBackgroundParticle.sks was not found by \(self), aborting!")
+            }
             
             let emmiterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(path!) as! SKNode
             
-            let blueScene = SKScene()
+            let blueScene = SKScene(size: CGSize(width: 150, height: 250))
             blueScene.addChild(emmiterNode)
             blueScene.scaleMode = .AspectFit
-            
             return blueScene
         }
         
         class var RedScene: SKScene {
             let path = NSBundle.mainBundle().pathForResource("RedBackgroundParticle", ofType: "sks")
             
-            guard (path != nil) else { fatalError("file: RedBackgroundParticle.sks was not found by \(self), aborting!") }
+            guard (path != nil) else {
+                fatalError("file: RedBackgroundParticle.sks was not found by \(self), aborting!")
+            }
             
             let emmiterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(path!) as! SKNode
             
-            let redScene = SKScene()
+            let redScene = SKScene(size: CGSize(width: 150, height: 250))
             redScene.addChild(emmiterNode)
             redScene.scaleMode = .AspectFit
             
@@ -70,7 +85,7 @@ class BackGroundView: SKView {
             switch newValue {
             case .Home:
                 _state = newValue
-                return
+                self.presentScene(BackgroundScenes.HomeScene)
             case .Blue:
                 _state = newValue
                 self.presentScene(BackgroundScenes.BlueScene)
@@ -80,5 +95,6 @@ class BackGroundView: SKView {
             }
         }
     }
+    
     
 }

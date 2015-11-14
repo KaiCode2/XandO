@@ -25,15 +25,10 @@ final class BackgroundViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        //TODO: replace with NSStringFromClass
-        let homeVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("HomeVC") as UIViewController
-        print(view.frame)
-        print(homeVC.view.frame)
+        print(NSStringFromClass(HomeViewController))
+        let homeVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier(NSStringFromClass(HomeViewController)) as UIViewController
         
-        
-        view.addSubview(homeVC.view)
-//        addChildViewController(homeVC)
-//        presentViewController(homeVC, animated: true, completion: nil)
+        presentViewController(homeVC, animated: true, completion: nil)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

@@ -8,9 +8,25 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController, SettingsViewControllerDelegate {
     
-    override func viewDidLoad() {
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
+    @IBAction func presentSettings(sender: AnyObject) {
+        let settingsVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier(NSStringFromClass(SettingsViewController)) as? SettingsViewController
         
+        guard (settingsVC != nil) else {
+            fatalError("\(NSStringFromClass(SettingsViewController)): is nil, terminating in file: \(self)")
+        }
+        
+        settingsVC?.delegate = self
+        
+        presentViewController(settingsVC!, animated: true, completion: nil)
+    }
+    
+    func shouldDismissSettings() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

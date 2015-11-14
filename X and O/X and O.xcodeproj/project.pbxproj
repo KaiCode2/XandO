@@ -12,6 +12,7 @@
 		AC2305571BEEB40800B74E16 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AC2305591BEEBA2800B74E16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305581BEEBA2800B74E16 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AC23055B1BEEC2C100B74E16 /* HomeBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
+		ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */; };
 		ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00831BE1EA2B001182FF /* Main.storyboard */; };
 		ACEB00871BE1EA2B001182FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00861BE1EA2B001182FF /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
 		AC2305581BEEBA2800B74E16 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HomeBackgroundParticle.sks; sourceTree = "<group>"; };
+		ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ACEB007C1BE1EA2B001182FF /* X and O.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X and O.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACEB00841BE1EA2B001182FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */,
 				AC2305581BEEBA2800B74E16 /* HomeViewController.swift */,
+				ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				AC2305571BEEB40800B74E16 /* BackgroundViewController.swift in Sources */,
 				AC2305521BEC875F00B74E16 /* BackGroundView.swift in Sources */,
 				ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */,
+				ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */,
 				AC2305591BEEBA2800B74E16 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

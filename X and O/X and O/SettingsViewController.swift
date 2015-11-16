@@ -12,7 +12,7 @@ protocol SettingsViewControllerDelegate {
     func shouldDismissSettings()
 }
 
-final class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+final class SettingsViewController: UIViewController, UITableViewDataSource {
     @IBOutlet private weak var generalSettingsTableView: UITableView!
     @IBOutlet private weak var aboutTableView: UITableView!
     
@@ -30,9 +30,7 @@ final class SettingsViewController: UIViewController, UITableViewDataSource, UIT
         
         // TODO: set versionLabel text to current build
         
-        generalSettingsTableView.delegate = self
         generalSettingsTableView.dataSource = self
-        aboutTableView.delegate = self
         aboutTableView.dataSource = self
         
         generalSettingsTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: constants.generalReuseID)
@@ -92,14 +90,4 @@ final class SettingsViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
-    
-    // MARK: UITableViewDelegate methods
-    
-    
-    
-    
-    
-//    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-//        return .LightContent
-//    }
 }

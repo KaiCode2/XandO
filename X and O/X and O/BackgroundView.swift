@@ -8,10 +8,21 @@
 
 import SpriteKit
 
-final class BackGroundView: SKView {
+final class BackgroundView: SKView {
+    var visualView: UIVisualEffectView = {
+        let view = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
+        view.frame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height)
+        
+        return view
+    }()
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.addSubview(visualView)
+    }
     
     private class BackgroundScenes {
-        
         class var HomeScene: SKScene {
             let path = NSBundle.mainBundle().pathForResource("HomeBackgroundParticle", ofType: "sks")
             
@@ -69,7 +80,7 @@ final class BackGroundView: SKView {
             switch self {
             case .Blue: self = .Red
             case .Red: self = .Blue
-            case .Home: self = .Blue
+            case .Home: return
             }
         }
     }

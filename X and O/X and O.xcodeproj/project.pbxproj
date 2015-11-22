@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC2305501BEC873300B74E16 /* RedBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
-		AC2305521BEC875F00B74E16 /* BackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305511BEC875F00B74E16 /* BackGroundView.swift */; settings = {ASSET_TAGS = (); }; };
-		AC2305571BEEB40800B74E16 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AC2305521BEC875F00B74E16 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305511BEC875F00B74E16 /* BackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
 		AC2305591BEEBA2800B74E16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305581BEEBA2800B74E16 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AC23055B1BEEC2C100B74E16 /* HomeBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
 		ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -24,8 +23,7 @@
 
 /* Begin PBXFileReference section */
 		AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RedBackgroundParticle.sks; sourceTree = "<group>"; };
-		AC2305511BEC875F00B74E16 /* BackGroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundView.swift; sourceTree = "<group>"; };
-		AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
+		AC2305511BEC875F00B74E16 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		AC2305581BEEBA2800B74E16 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HomeBackgroundParticle.sks; sourceTree = "<group>"; };
 		ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +65,7 @@
 		AC2305541BEC8C4800B74E16 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AC2305511BEC875F00B74E16 /* BackGroundView.swift */,
+				AC2305511BEC875F00B74E16 /* BackgroundView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -75,7 +73,6 @@
 		AC2305551BEC8C5100B74E16 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */,
 				AC2305581BEEBA2800B74E16 /* HomeViewController.swift */,
 				ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */,
 			);
@@ -204,8 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2305571BEEB40800B74E16 /* BackgroundViewController.swift in Sources */,
-				AC2305521BEC875F00B74E16 /* BackGroundView.swift in Sources */,
+				AC2305521BEC875F00B74E16 /* BackgroundView.swift in Sources */,
 				ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */,
 				ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */,
 				AC2305591BEEBA2800B74E16 /* HomeViewController.swift in Sources */,
@@ -321,10 +317,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "X and O/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "KaiAldag.X-and-O";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -332,10 +331,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "X and O/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "KaiAldag.X-and-O";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

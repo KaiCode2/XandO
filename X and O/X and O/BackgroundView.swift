@@ -80,12 +80,12 @@ final class BackgroundView: SKView {
             switch self {
             case .Blue: self = .Red
             case .Red: self = .Blue
-            case .Home: self = .Blue
+            case .Home: return
             }
         }
     }
     
-    private var _state = State.Red
+    private var _state = State.Home
     
     var state: State {
         get {

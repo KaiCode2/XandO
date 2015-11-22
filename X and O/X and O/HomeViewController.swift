@@ -18,9 +18,7 @@ final class HomeViewController: UIViewController, SettingsViewControllerDelegate
         
         backgroundView.showsFPS = true
         backgroundView.showsNodeCount = true
-        backgroundView.state = .Red
-        print(backgroundView.state)
-        print(backgroundView.frame)
+        backgroundView.state = .Home
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

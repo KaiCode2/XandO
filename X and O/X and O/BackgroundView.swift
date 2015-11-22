@@ -8,10 +8,10 @@
 
 import SpriteKit
 
-final class BackGroundView: SKView {
+@IBDesignable final class BackgroundView: SKView {
+//    @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
     private class BackgroundScenes {
-        
         class var HomeScene: SKScene {
             let path = NSBundle.mainBundle().pathForResource("HomeBackgroundParticle", ofType: "sks")
             
@@ -74,9 +74,9 @@ final class BackGroundView: SKView {
         }
     }
     
-    private var _state = State.Home
+    private var _state = State.Red
     
-    var state: State {
+    @IBInspectable var state: State {
         get {
             return _state
         }

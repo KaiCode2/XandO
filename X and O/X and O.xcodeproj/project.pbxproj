@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC2305501BEC873300B74E16 /* RedBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
-		AC2305521BEC875F00B74E16 /* BackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305511BEC875F00B74E16 /* BackGroundView.swift */; settings = {ASSET_TAGS = (); }; };
-		AC2305571BEEB40800B74E16 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AC2305521BEC875F00B74E16 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305511BEC875F00B74E16 /* BackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
 		AC2305591BEEBA2800B74E16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305581BEEBA2800B74E16 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AC23055B1BEEC2C100B74E16 /* HomeBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
 		ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -20,12 +19,12 @@
 		ACEB00931BE1EB30001182FF /* BlueBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
 		ACEB00941BE1EB30001182FF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00921BE1EB30001182FF /* spark.png */; settings = {ASSET_TAGS = (); }; };
 		ACEB00961BE1EB5D001182FF /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEB00951BE1EB5D001182FF /* SpriteKit.framework */; };
+		ACEBAE261C0166150021A090 /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEBAE251C0166150021A090 /* BackgroundView.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RedBackgroundParticle.sks; sourceTree = "<group>"; };
-		AC2305511BEC875F00B74E16 /* BackGroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundView.swift; sourceTree = "<group>"; };
-		AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
+		AC2305511BEC875F00B74E16 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		AC2305581BEEBA2800B74E16 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HomeBackgroundParticle.sks; sourceTree = "<group>"; };
 		ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlueBackgroundParticle.sks; sourceTree = "<group>"; };
 		ACEB00921BE1EB30001182FF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		ACEB00951BE1EB5D001182FF /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		ACEBAE251C0166150021A090 /* BackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,8 @@
 		AC2305541BEC8C4800B74E16 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AC2305511BEC875F00B74E16 /* BackGroundView.swift */,
+				AC2305511BEC875F00B74E16 /* BackgroundView.swift */,
+				ACEBAE251C0166150021A090 /* BackgroundView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -75,7 +76,6 @@
 		AC2305551BEC8C5100B74E16 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AC2305561BEEB40800B74E16 /* BackgroundViewController.swift */,
 				AC2305581BEEBA2800B74E16 /* HomeViewController.swift */,
 				ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */,
 			);
@@ -193,6 +193,7 @@
 				AC2305501BEC873300B74E16 /* RedBackgroundParticle.sks in Resources */,
 				ACEB00871BE1EA2B001182FF /* Assets.xcassets in Resources */,
 				AC23055B1BEEC2C100B74E16 /* HomeBackgroundParticle.sks in Resources */,
+				ACEBAE261C0166150021A090 /* BackgroundView.xib in Resources */,
 				ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,8 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2305571BEEB40800B74E16 /* BackgroundViewController.swift in Sources */,
-				AC2305521BEC875F00B74E16 /* BackGroundView.swift in Sources */,
+				AC2305521BEC875F00B74E16 /* BackgroundView.swift in Sources */,
 				ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */,
 				ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */,
 				AC2305591BEEBA2800B74E16 /* HomeViewController.swift in Sources */,

@@ -25,6 +25,16 @@ final class HomeViewController: UIViewController, SettingsViewControllerDelegate
         return .LightContent
     }
     
+    //MARK: Button events
+    
+    @IBAction func presentSingleGame(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func presentDualGame(sender: AnyObject) {
+        
+    }
+    
     @IBAction func presentSettings(sender: AnyObject) {
         let settingsVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier(NSStringFromClass(SettingsViewController)) as? SettingsViewController
         
@@ -36,6 +46,8 @@ final class HomeViewController: UIViewController, SettingsViewControllerDelegate
         
         presentViewController(settingsVC!, animated: true, completion: nil)
     }
+    
+    //MARK: SettingsViewControllerDelegate methods
     
     func shouldDismissSettings() {
         dismissViewControllerAnimated(true, completion: nil)

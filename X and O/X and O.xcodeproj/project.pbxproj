@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC2305501BEC873300B74E16 /* RedBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
-		AC2305521BEC875F00B74E16 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305511BEC875F00B74E16 /* BackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
-		AC2305591BEEBA2800B74E16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305581BEEBA2800B74E16 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		AC23055B1BEEC2C100B74E16 /* HomeBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
-		ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AC2305501BEC873300B74E16 /* RedBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23054F1BEC873300B74E16 /* RedBackgroundParticle.sks */; };
+		AC2305521BEC875F00B74E16 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305511BEC875F00B74E16 /* BackgroundView.swift */; };
+		AC2305591BEEBA2800B74E16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2305581BEEBA2800B74E16 /* HomeViewController.swift */; };
+		AC23055B1BEEC2C100B74E16 /* HomeBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */; };
+		AC40C3A11C01A42900D716C7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40C3A01C01A42900D716C7 /* GameViewController.swift */; };
+		ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */; };
 		ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */; };
 		ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00831BE1EA2B001182FF /* Main.storyboard */; };
 		ACEB00871BE1EA2B001182FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00861BE1EA2B001182FF /* Assets.xcassets */; };
 		ACEB008A1BE1EA2B001182FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00881BE1EA2B001182FF /* LaunchScreen.storyboard */; };
-		ACEB00931BE1EB30001182FF /* BlueBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
-		ACEB00941BE1EB30001182FF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00921BE1EB30001182FF /* spark.png */; settings = {ASSET_TAGS = (); }; };
+		ACEB00931BE1EB30001182FF /* BlueBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */; };
+		ACEB00941BE1EB30001182FF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00921BE1EB30001182FF /* spark.png */; };
 		ACEB00961BE1EB5D001182FF /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEB00951BE1EB5D001182FF /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		AC2305511BEC875F00B74E16 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		AC2305581BEEBA2800B74E16 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AC23055A1BEEC2C100B74E16 /* HomeBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HomeBackgroundParticle.sks; sourceTree = "<group>"; };
+		AC40C3A01C01A42900D716C7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ACEB007C1BE1EA2B001182FF /* X and O.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X and O.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2305581BEEBA2800B74E16 /* HomeViewController.swift */,
+				AC40C3A01C01A42900D716C7 /* GameViewController.swift */,
 				ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */,
 			);
 			name = ViewControllers;
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC40C3A11C01A42900D716C7 /* GameViewController.swift in Sources */,
 				AC2305521BEC875F00B74E16 /* BackgroundView.swift in Sources */,
 				ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */,
 				ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */,

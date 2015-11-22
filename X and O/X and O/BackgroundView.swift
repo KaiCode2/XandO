@@ -8,8 +8,19 @@
 
 import SpriteKit
 
-@IBDesignable final class BackgroundView: SKView {
-//    @IBOutlet weak var visualEffectView: UIVisualEffectView!
+final class BackgroundView: SKView {
+    var visualView: UIVisualEffectView = {
+        let view = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
+        view.frame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height)
+        
+        return view
+    }()
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.addSubview(visualView)
+    }
     
     private class BackgroundScenes {
         class var HomeScene: SKScene {
@@ -76,7 +87,7 @@ import SpriteKit
     
     private var _state = State.Red
     
-    @IBInspectable var state: State {
+    var state: State {
         get {
             return _state
         }

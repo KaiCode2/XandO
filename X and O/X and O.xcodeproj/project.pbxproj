@@ -19,7 +19,6 @@
 		ACEB00931BE1EB30001182FF /* BlueBackgroundParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */; settings = {ASSET_TAGS = (); }; };
 		ACEB00941BE1EB30001182FF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00921BE1EB30001182FF /* spark.png */; settings = {ASSET_TAGS = (); }; };
 		ACEB00961BE1EB5D001182FF /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEB00951BE1EB5D001182FF /* SpriteKit.framework */; };
-		ACEBAE261C0166150021A090 /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEBAE251C0166150021A090 /* BackgroundView.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		ACEB00911BE1EB30001182FF /* BlueBackgroundParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlueBackgroundParticle.sks; sourceTree = "<group>"; };
 		ACEB00921BE1EB30001182FF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		ACEB00951BE1EB5D001182FF /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		ACEBAE251C0166150021A090 /* BackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				AC2305511BEC875F00B74E16 /* BackgroundView.swift */,
-				ACEBAE251C0166150021A090 /* BackgroundView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -193,7 +190,6 @@
 				AC2305501BEC873300B74E16 /* RedBackgroundParticle.sks in Resources */,
 				ACEB00871BE1EA2B001182FF /* Assets.xcassets in Resources */,
 				AC23055B1BEEC2C100B74E16 /* HomeBackgroundParticle.sks in Resources */,
-				ACEBAE261C0166150021A090 /* BackgroundView.xib in Resources */,
 				ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

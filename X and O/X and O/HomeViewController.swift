@@ -7,8 +7,21 @@
 //
 
 import UIKit
+import SpriteKit
 
 final class HomeViewController: UIViewController, SettingsViewControllerDelegate {
+    
+    @IBOutlet weak var backgroundView: BackgroundView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        backgroundView.showsFPS = true
+        backgroundView.showsNodeCount = true
+        backgroundView.state = .Red
+        print(backgroundView.state)
+        print(backgroundView.frame)
+    }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent

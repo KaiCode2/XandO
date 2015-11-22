@@ -85,6 +85,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Oxd-JN-JlM" secondAttribute="trailing" constant="-20" id="wtv-8e-xIQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="Oxd-JN-JlM" id="G0s-6f-jgc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbr-BS-Ls4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

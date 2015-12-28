@@ -36,7 +36,7 @@ class Board {
             print("Delegate is nil therefore you will not be informed if a winner is found.")
         }
         
-        if moveNumber < 5 {
+        if moveNumber < 4 {
             // It is impossible to win within the first 4 moves
             return
         }

@@ -45,3 +45,13 @@ class Player {
         }
     }
 }
+
+class Players {
+    var playerX: Player?
+    var playerO: Player?
+    
+    init(board: Board) {
+        self.playerX = Player(board: board, type: .X)
+        self.playerO = Player(board: board, type: .O)
+    }
+}

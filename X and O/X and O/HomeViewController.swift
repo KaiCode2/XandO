@@ -32,7 +32,13 @@ final class HomeViewController: UIViewController, SettingsViewControllerDelegate
     }
     
     @IBAction func presentDualGame(sender: AnyObject) {
+        let gameVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier(NSStringFromClass(GameViewController)) as? GameViewController
         
+        guard (gameVC != nil) else {
+            fatalError("\(NSStringFromClass(GameViewController)): is nil, terminating in file: \(self)")
+        }
+        
+        presentViewController(gameVC!, animated: true, completion: nil)
     }
     
     @IBAction func presentSettings(sender: AnyObject) {

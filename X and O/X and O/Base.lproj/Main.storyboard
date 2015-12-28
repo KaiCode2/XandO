@@ -111,9 +111,37 @@
                     <view key="view" contentMode="scaleToFill" id="746-hE-Q6Y">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztr-WA-t9N" customClass="BackgroundView" customModule="X_and_O" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVG-sQ-mjx" customClass="BoardView" customModule="X_and_O" customModuleProvider="target">
+                                <rect key="frame" x="50" y="50" width="500" height="500"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OVG-sQ-mjx" secondAttribute="height" multiplier="1:1" id="pRF-y9-aSn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ztr-WA-t9N" firstAttribute="top" secondItem="XQv-V4-HJe" secondAttribute="bottom" constant="-20" id="2fh-wq-Nem"/>
+                            <constraint firstItem="Ztr-WA-t9N" firstAttribute="leading" secondItem="746-hE-Q6Y" secondAttribute="leading" id="AOS-G2-ddH"/>
+                            <constraint firstItem="OVG-sQ-mjx" firstAttribute="centerY" secondItem="746-hE-Q6Y" secondAttribute="centerY" id="EV7-OG-cju"/>
+                            <constraint firstAttribute="trailing" secondItem="Ztr-WA-t9N" secondAttribute="trailing" id="Iky-n2-9fd"/>
+                            <constraint firstItem="9EB-Kg-6xI" firstAttribute="top" secondItem="Ztr-WA-t9N" secondAttribute="bottom" id="Y4c-5n-hDp"/>
+                            <constraint firstItem="OVG-sQ-mjx" firstAttribute="width" secondItem="746-hE-Q6Y" secondAttribute="width" constant="-100" id="tfo-fq-e8H"/>
+                            <constraint firstItem="OVG-sQ-mjx" firstAttribute="centerX" secondItem="746-hE-Q6Y" secondAttribute="centerX" id="yK0-ra-z1S"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="Ztr-WA-t9N" id="JKS-gv-AMk"/>
+                        <outlet property="boardView" destination="OVG-sQ-mjx" id="fiL-OZ-0lW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75K-pJ-g06" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,7 +228,7 @@
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kx0-U3-Xxo" firstAttribute="leading" secondItem="zxz-0N-dlD" secondAttribute="leadingMargin" constant="-20" id="13X-Ay-x4m"/>
                             <constraint firstAttribute="leadingMargin" secondItem="bZ0-vt-XlO" secondAttribute="leading" id="1kK-7F-2Of"/>

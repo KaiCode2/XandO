@@ -9,7 +9,11 @@
 import UIKit
 import SpriteKit
 
-final class HomeViewController: UIViewController, SettingsViewControllerDelegate {
+protocol PresenterType {
+    func shouldDismiss()
+}
+
+final class HomeViewController: UIViewController, PresenterType {
     
     @IBOutlet weak var backgroundView: BackgroundView!
     
@@ -38,6 +42,8 @@ final class HomeViewController: UIViewController, SettingsViewControllerDelegate
             fatalError("\(NSStringFromClass(GameViewController)): is nil, terminating in file: \(self)")
         }
         
+        gameVC?.presenter = self
+        
         presentViewController(gameVC!, animated: true, completion: nil)
     }
     
@@ -48,14 +54,14 @@ final class HomeViewController: UIViewController, SettingsViewControllerDelegate
             fatalError("\(NSStringFromClass(SettingsViewController)): is nil, terminating in file: \(self)")
         }
         
-        settingsVC?.delegate = self
+        settingsVC?.presenter = self
         
         presentViewController(settingsVC!, animated: true, completion: nil)
     }
     
-    //MARK: SettingsViewControllerDelegate methods
+    //MARK: PresenterType methods
     
-    func shouldDismissSettings() {
+    func shouldDismiss() {
         dismissViewControllerAnimated(true, completion: nil)
     }
 }

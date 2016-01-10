@@ -16,6 +16,8 @@
 		AC40C3A11C01A42900D716C7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40C3A01C01A42900D716C7 /* GameViewController.swift */; };
 		AC40C3A51C11672400D716C7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40C3A41C11672400D716C7 /* Board.swift */; };
 		AC40C3A81C11679400D716C7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40C3A71C11679400D716C7 /* Player.swift */; };
+		ACBA48411C38491F00010592 /* ResponsiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA48401C38491F00010592 /* ResponsiveView.swift */; };
+		ACBA48431C38498700010592 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBA48421C38498700010592 /* CoreMotion.framework */; };
 		ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */; };
 		ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */; };
 		ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00831BE1EA2B001182FF /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		AC40C3A01C01A42900D716C7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		AC40C3A41C11672400D716C7 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		AC40C3A71C11679400D716C7 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		ACBA48401C38491F00010592 /* ResponsiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveView.swift; sourceTree = "<group>"; };
+		ACBA48421C38498700010592 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ACEB007C1BE1EA2B001182FF /* X and O.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X and O.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACBA48431C38498700010592 /* CoreMotion.framework in Frameworks */,
 				ACEB00961BE1EB5D001182FF /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +80,7 @@
 		AC2305541BEC8C4800B74E16 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ACBA48401C38491F00010592 /* ResponsiveView.swift */,
 				AC2305511BEC875F00B74E16 /* BackgroundView.swift */,
 				AC404F2E1C2E78C100AC9562 /* BoardView.swift */,
 				AC404F2A1C2E78A000AC9562 /* BoardView.xib */,
@@ -144,6 +150,7 @@
 		ACEB00981BE1EB86001182FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACBA48421C38498700010592 /* CoreMotion.framework */,
 				ACEB00951BE1EB5D001182FF /* SpriteKit.framework */,
 			);
 			name = Frameworks;
@@ -227,6 +234,7 @@
 			files = (
 				AC40C3A11C01A42900D716C7 /* GameViewController.swift in Sources */,
 				AC2305521BEC875F00B74E16 /* BackgroundView.swift in Sources */,
+				ACBA48411C38491F00010592 /* ResponsiveView.swift in Sources */,
 				AC40C3A51C11672400D716C7 /* Board.swift in Sources */,
 				ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */,
 				AC40C3A81C11679400D716C7 /* Player.swift in Sources */,

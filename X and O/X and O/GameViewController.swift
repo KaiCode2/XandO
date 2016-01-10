@@ -15,6 +15,8 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
     private var board: Board!
     private var players: Players?
     
+    var presenter: protocol<PresenterType>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,9 +35,13 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
         // TODO: fix the sizing being done on the board
         let boardWidth = boardView.frame.width
         let boardHeight = boardView.frame.height
-        boardView.board?.frame = CGRect(x: boardView.frame.origin.x, y: boardView.frame.origin.y, width: boardWidth, height: boardHeight)
+        boardView.board?.frame = CGRect(x: boardView.frame.origin.x - 50, y: boardView.frame.origin.y - 50, width: boardWidth, height: boardHeight)
         print(boardView.board?.frame)
         print(boardView.frame)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
     
@@ -68,5 +74,13 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
     func winner(winner: PlayerOptions) {
         let winnerAlert = UIAlertView(title: "Winner!", message: "\(winner) won!", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "OK")
         winnerAlert.show()
+    }
+    
+    // MARK: Back button
+    
+    @IBAction func dismissGame(sender: AnyObject) {
+        if let pres = presenter {
+            pres.shouldDismiss()
+        }
     }
 }

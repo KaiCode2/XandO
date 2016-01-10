@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -14,7 +14,6 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1T-Wj-cMX">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                    <animations/>
                     <state key="normal" title="Button1"/>
                     <connections>
                         <action selector="button1tapped:" destination="-1" eventType="touchUpInside" id="3es-7O-jLj"/>
@@ -22,7 +21,6 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="un0-bj-jHQ">
                     <rect key="frame" x="200" y="0.0" width="200" height="200"/>
-                    <animations/>
                     <state key="normal" title="Button2"/>
                     <connections>
                         <action selector="button2tapped:" destination="-1" eventType="touchUpInside" id="ZTc-L8-iXF"/>
@@ -30,7 +28,6 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="him-tl-sEn">
                     <rect key="frame" x="400" y="0.0" width="200" height="200"/>
-                    <animations/>
                     <state key="normal" title="Button3"/>
                     <connections>
                         <action selector="button3tapped:" destination="-1" eventType="touchUpInside" id="MHK-G3-oqR"/>
@@ -38,7 +35,6 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvn-lB-lNR">
                     <rect key="frame" x="0.0" y="200" width="200" height="200"/>
-                    <animations/>
                     <state key="normal" title="Button4"/>
                     <connections>
                         <action selector="button4tapped:" destination="-1" eventType="touchUpInside" id="0j1-Rq-IA1"/>
@@ -46,7 +42,6 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVE-cD-PEo">
                     <rect key="frame" x="200" y="200" width="200" height="200"/>
-                    <animations/>
                     <state key="normal" title="Button5"/>
                     <connections>
                         <action selector="button5tapped:" destination="-1" eventType="touchUpInside" id="T71-lm-Nua"/>
@@ -54,7 +49,6 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eea-qX-oEB">
                     <rect key="frame" x="400" y="200" width="200" height="200"/>
-                    <animations/>
                     <state key="normal" title="Button6"/>
                     <connections>
                         <action selector="button6tapped:" destination="-1" eventType="touchUpInside" id="0wh-nm-yWI"/>
@@ -62,7 +56,6 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AA-e2-gYU">
                     <rect key="frame" x="0.0" y="400" width="200" height="200"/>
-                    <animations/>
                     <state key="normal" title="Button7"/>
                     <connections>
                         <action selector="button7tapped:" destination="-1" eventType="touchUpInside" id="DFM-dm-csK"/>
@@ -70,7 +63,6 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQH-cc-ob0">
                     <rect key="frame" x="200" y="400" width="200" height="200"/>
-                    <animations/>
                     <state key="normal" title="Button8"/>
                     <connections>
                         <action selector="button8tapped:" destination="-1" eventType="touchUpInside" id="llK-y5-VhV"/>
@@ -78,14 +70,12 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJl-XK-p0T">
                     <rect key="frame" x="400" y="400" width="200" height="200"/>
-                    <animations/>
                     <state key="normal" title="Button9"/>
                     <connections>
                         <action selector="button9tapped:" destination="-1" eventType="touchUpInside" id="7v0-sM-RcQ"/>
                     </connections>
                 </button>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Kvn-lB-lNR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2VL-Rp-g2C"/>

@@ -15,9 +15,9 @@ protocol BoardDelegate {
 class Board {
     var currentBoard: [[PlayerOptions]] = [[PlayerOptions]](count: 3, repeatedValue: [.None, .None, .None]) {
         didSet{
+            moveNumber++
             checkForWinner()
             currentMove.change()
-            moveNumber++
         }
     }
     var currentMove: PlayerOptions = .X
@@ -36,7 +36,7 @@ class Board {
             print("Delegate is nil therefore you will not be informed if a winner is found.")
         }
         
-        if moveNumber < 4 {
+        if moveNumber < 5 {
             // It is impossible to win within the first 4 moves
             return
         }

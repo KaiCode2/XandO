@@ -8,22 +8,18 @@
 
 import UIKit
 
-protocol SettingsViewControllerDelegate {
-    func shouldDismissSettings()
-}
 
 final class SettingsViewController: UIViewController, UITableViewDataSource {
     @IBOutlet private weak var generalSettingsTableView: UITableView!
     @IBOutlet private weak var aboutTableView: UITableView!
     
     @IBOutlet weak var versionLabel: UILabel!
-    var delegate: SettingsViewControllerDelegate?
     
     private struct constants {
         private static let generalReuseID = "GeneralCellID"
         private static let aboutReuseID = "AboutCellID"
     }
-    
+    var presenter: protocol<PresenterType>?
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,7 +36,9 @@ final class SettingsViewController: UIViewController, UITableViewDataSource {
     // MARK: Dismissal
     
     @IBAction func dismissSettings(sender: AnyObject) {
-        delegate?.shouldDismissSettings()
+        if let pres = presenter {
+            pres.shouldDismiss()
+        }
     }
     
     // MARK: UITableViewDataSource methods

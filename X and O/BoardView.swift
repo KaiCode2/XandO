@@ -24,12 +24,28 @@ class BoardView: UIView {
         if let view = NSBundle.mainBundle().loadNibNamed(kNibName, owner: self, options: nil).first {
             board = view as? UIView
             self.addSubview(board!)
+            
+            // TODO: add lines here
         } else {
             fatalError("BoardView.xib could not succesfully be loaded, aborting!")
         }
     }
     
+    // MARK: Line method
     
+    private func makeLine(start: (Int, Int), end: (Int, Int)) {
+        // TODO: implement this
+    }
+    
+    // MARK: Movement methods
+    
+    func shake() {
+        // TODO: make the board shake
+    }
+    
+    
+    // MARK: button methods
+    // TODO: refactor the below into one IBAction
     
     @IBAction func button1tapped(sender: AnyObject) {
         delegate?.didSelectItemInBoard((0, 0))

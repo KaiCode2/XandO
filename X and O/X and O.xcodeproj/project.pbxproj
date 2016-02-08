@@ -16,7 +16,8 @@
 		AC40C3A11C01A42900D716C7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40C3A01C01A42900D716C7 /* GameViewController.swift */; };
 		AC40C3A51C11672400D716C7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40C3A41C11672400D716C7 /* Board.swift */; };
 		AC40C3A81C11679400D716C7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40C3A71C11679400D716C7 /* Player.swift */; };
-		ACBA48411C38491F00010592 /* ResponsiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA48401C38491F00010592 /* ResponsiveView.swift */; };
+		AC76B13A1C59B6E6001BD5F2 /* Board+GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC76B1391C59B6E6001BD5F2 /* Board+GameModel.swift */; };
+		AC76B13D1C59C5B9001BD5F2 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC76B13C1C59C5B9001BD5F2 /* Move.swift */; };
 		ACBA48431C38498700010592 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBA48421C38498700010592 /* CoreMotion.framework */; };
 		ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */; };
 		ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */; };
@@ -38,7 +39,8 @@
 		AC40C3A01C01A42900D716C7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		AC40C3A41C11672400D716C7 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		AC40C3A71C11679400D716C7 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		ACBA48401C38491F00010592 /* ResponsiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveView.swift; sourceTree = "<group>"; };
+		AC76B1391C59B6E6001BD5F2 /* Board+GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Board+GameModel.swift"; sourceTree = "<group>"; };
+		AC76B13C1C59C5B9001BD5F2 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		ACBA48421C38498700010592 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ACEB007C1BE1EA2B001182FF /* X and O.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X and O.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +82,6 @@
 		AC2305541BEC8C4800B74E16 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ACBA48401C38491F00010592 /* ResponsiveView.swift */,
 				AC2305511BEC875F00B74E16 /* BackgroundView.swift */,
 				AC404F2E1C2E78C100AC9562 /* BoardView.swift */,
 				AC404F2A1C2E78A000AC9562 /* BoardView.xib */,
@@ -101,10 +102,20 @@
 		AC40C3A61C11672A00D716C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AC76B13B1C59BB98001BD5F2 /* MinMax */,
 				AC40C3A41C11672400D716C7 /* Board.swift */,
 				AC40C3A71C11679400D716C7 /* Player.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		AC76B13B1C59BB98001BD5F2 /* MinMax */ = {
+			isa = PBXGroup;
+			children = (
+				AC76B1391C59B6E6001BD5F2 /* Board+GameModel.swift */,
+				AC76B13C1C59C5B9001BD5F2 /* Move.swift */,
+			);
+			name = MinMax;
 			sourceTree = "<group>";
 		};
 		ACEB00731BE1EA2B001182FF = {
@@ -232,9 +243,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC76B13D1C59C5B9001BD5F2 /* Move.swift in Sources */,
 				AC40C3A11C01A42900D716C7 /* GameViewController.swift in Sources */,
+				AC76B13A1C59B6E6001BD5F2 /* Board+GameModel.swift in Sources */,
 				AC2305521BEC875F00B74E16 /* BackgroundView.swift in Sources */,
-				ACBA48411C38491F00010592 /* ResponsiveView.swift in Sources */,
 				AC40C3A51C11672400D716C7 /* Board.swift in Sources */,
 				ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */,
 				AC40C3A81C11679400D716C7 /* Player.swift in Sources */,

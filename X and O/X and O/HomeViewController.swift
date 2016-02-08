@@ -32,7 +32,16 @@ final class HomeViewController: UIViewController, PresenterType {
     //MARK: Button events
     
     @IBAction func presentSingleGame(sender: AnyObject) {
+        let gameVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier(NSStringFromClass(GameViewController)) as? GameViewController
         
+        guard (gameVC != nil) else {
+            fatalError("\(NSStringFromClass(GameViewController)): is nil, terminating in file: \(self)")
+        }
+        
+        gameVC?.isSinglePlayer = true
+        gameVC?.presenter = self
+        
+        presentViewController(gameVC!, animated: true, completion: nil)
     }
     
     @IBAction func presentDualGame(sender: AnyObject) {

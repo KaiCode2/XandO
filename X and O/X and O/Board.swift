@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import GameplayKit
 
 protocol BoardDelegate {
     func winner(winner: PlayerOptions)
 }
 
-class Board {
+class Board: NSObject {
     var currentBoard: [[PlayerOptions]] = [[PlayerOptions]](count: 3, repeatedValue: [.None, .None, .None]) {
         didSet{
             moveNumber++
@@ -20,31 +21,55 @@ class Board {
             currentMove.change()
         }
     }
-    var currentMove: PlayerOptions = .X
+    
+    internal var currentMove: PlayerOptions = .X
+    
+    var availibleMoves: [Position] {
+        get{
+            var poses: [Position] = []
+            
+            for (icol, col) in currentBoard.enumerate() {
+                for (ient, ent) in col.enumerate() {
+                    if ent == .None {
+                        poses.append((icol, ient))
+                    }
+                }
+            }
+            
+            return poses
+        }
+    }
     
     //Used for initial optimization purposes
     private var moveNumber = 0
     
     var delegate: BoardDelegate?
     
+    func updateMovesFromBoard(oldBoard: Board) {
+        // TODO: merge oldBoard to the current board
+        
+    }
     
     // Convert to:
     // private func checkForWinner(index: (Int, Int))
     // this will reduce the amount of checks required and will increase performance
-    private func checkForWinner() {
+    private func checkForWinner() -> (Bool, Player?) {
         if delegate == nil {
             print("Delegate is nil therefore you will not be informed if a winner is found.")
         }
         
         if moveNumber < 5 {
             // It is impossible to win within the first 4 moves
-            return
+            return (false, nil)
         }
         
         if checkVertical(0) || checkVertical(1) || checkVertical(2) || checkHorizontal(0) || checkHorizontal(1) || checkHorizontal(2) || checkDiagonal(true) || checkDiagonal(false) {
             print("WINNER!")
             delegate?.winner(currentMove)
+            return (true, currentPlayer)
         }
+        
+        return (false, nil)
     }
     
     private func checkVertical(collumn: Int) -> Bool {

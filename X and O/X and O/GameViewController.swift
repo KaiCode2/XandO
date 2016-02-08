@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import GameplayKit
 
+@available(iOS 9.0, *)
 class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
     @IBOutlet weak var backgroundView: BackgroundView!
     @IBOutlet weak var boardView: BoardView!
     
     private var board: Board!
     private var players: Players?
+    
+    var isSinglePlayer = false
+    private var strategist: GKMinmaxStrategist?
     
     var presenter: protocol<PresenterType>?
     
@@ -23,6 +28,14 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
         // board setup
         board = Board(delegate: self)
         players = Players(board: board)
+        
+        // Setup singleplayer (if needed)
+        if isSinglePlayer {
+            strategist = GKMinmaxStrategist()
+            
+            strategist?.maxLookAheadDepth = 3 // Remodel this to setting set up user
+            strategist?.randomSource = GKARC4RandomSource()
+        }
         
         // backgroundView setup
         backgroundView.showsFPS = true
@@ -48,17 +61,16 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
     // MARK: BoardViewDelegate methods
     
     func didSelectItemInBoard(index: (Int, Int)) {
-        switch board.currentMove {
+        switch board.currentPlayer.type {
         case .X:
             do {
-                try players?.playerX?.makeMove(index)
+                try players?.playerX.makeMove(index)
             } catch {
                 
             }
-            
         case .O:
             do {
-                try players?.playerO?.makeMove(index)
+                try players?.playerO.makeMove(index)
             } catch {
                 
             }

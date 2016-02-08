@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import GameplayKit
+
 
 typealias Position = (Int, Int)
 
@@ -28,9 +30,19 @@ enum PlayError: ErrorType {
     case MoveTaken
 }
 
-class Player {
+class Player: NSObject, GKGameModelPlayer {
     var board: Board
     let type: PlayerOptions
+    
+    @objc var playerId: Int {
+        get{
+            switch type {
+            case .X: return 0
+            case .O: return 1
+            default: fatalError("Player.type cannot be None. Terminating.")
+            }
+        }
+    }
     
     init(board: Board, type: PlayerOptions) {
         self.board = board
@@ -47,11 +59,15 @@ class Player {
 }
 
 class Players {
-    var playerX: Player?
-    var playerO: Player?
+    var playerX: Player
+    var playerO: Player
     
     init(board: Board) {
         self.playerX = Player(board: board, type: .X)
         self.playerO = Player(board: board, type: .O)
+    }
+    
+    func all() -> [Player] {
+        return [playerX, playerO]
     }
 }

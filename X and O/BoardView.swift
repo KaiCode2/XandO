@@ -12,7 +12,7 @@ protocol BoardViewDelegate {
     func didSelectItemInBoard(index: (Int, Int))
 }
 
-class BoardView: UIView {
+final class BoardView: UIView {
     weak var board: UIView?
     
     var delegate: BoardViewDelegate?
@@ -44,42 +44,22 @@ class BoardView: UIView {
     }
     
     
-    // MARK: button methods
-    // TODO: refactor the below into one IBAction
+    // MARK: button method
     
-    @IBAction func button1tapped(sender: AnyObject) {
-        delegate?.didSelectItemInBoard((0, 0))
-    }
-    
-    @IBAction func button2tapped(sender: AnyObject) {
-        delegate?.didSelectItemInBoard((0, 1))
-    }
-    
-    @IBAction func button3tapped(sender: AnyObject) {
-        delegate?.didSelectItemInBoard((0, 2))
-    }
-    
-    @IBAction func button4tapped(sender: AnyObject) {
-        delegate?.didSelectItemInBoard((1, 0))
-    }
-    
-    @IBAction func button5tapped(sender: AnyObject) {
-        delegate?.didSelectItemInBoard((1, 1))
-    }
-    
-    @IBAction func button6tapped(sender: AnyObject) {
-        delegate?.didSelectItemInBoard((1, 2))
-    }
-    
-    @IBAction func button7tapped(sender: AnyObject) {
-        delegate?.didSelectItemInBoard((2, 0))
-    }
-    
-    @IBAction func button8tapped(sender: AnyObject) {
-        delegate?.didSelectItemInBoard((2, 1))
-    }
-    
-    @IBAction func button9tapped(sender: AnyObject) {
-        delegate?.didSelectItemInBoard((2, 2))
+    @IBAction func buttonTapped(sender: AnyObject) {
+        if let t = sender.tag {
+            switch t {
+            case 0: delegate?.didSelectItemInBoard((0, 0)) ; print("0.0")
+            case 1: delegate?.didSelectItemInBoard((0, 1)) ; print("0.1")
+            case 2: delegate?.didSelectItemInBoard((0, 2)) ; print("0.2")
+            case 3: delegate?.didSelectItemInBoard((1, 0)) ; print("1.0")
+            case 4: delegate?.didSelectItemInBoard((1, 1)) ; print("1.1")
+            case 5: delegate?.didSelectItemInBoard((1, 2)) ; print("1.2")
+            case 6: delegate?.didSelectItemInBoard((2, 0)) ; print("2.0")
+            case 7: delegate?.didSelectItemInBoard((2, 1)) ; print("2.1")
+            case 8: delegate?.didSelectItemInBoard((2, 2)) ; print("2.2")
+            default: fatalError("Should not end up here")
+            }
+        }
     }
 }

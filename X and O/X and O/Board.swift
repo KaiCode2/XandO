@@ -72,7 +72,7 @@ class Board {
                 return true
             }
         case false:
-            if currentBoard[0][2] == currentBoard[1][1] && currentBoard[0][2] == currentBoard[1][1] {
+            if currentBoard[0][2] == currentBoard[1][1] && currentBoard[1][1] == currentBoard[2][0] {
                 return true
             }
         }

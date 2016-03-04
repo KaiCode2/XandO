@@ -24,17 +24,9 @@ final class BoardView: UIView {
         if let view = NSBundle.mainBundle().loadNibNamed(kNibName, owner: self, options: nil).first {
             board = view as? UIView
             self.addSubview(board!)
-            
-            // TODO: add lines here
         } else {
             fatalError("BoardView.xib could not succesfully be loaded, aborting!")
         }
-    }
-    
-    // MARK: Line method
-    
-    private func makeLine(start: (Int, Int), end: (Int, Int)) {
-        // TODO: implement this
     }
     
     // MARK: Movement methods
@@ -43,6 +35,40 @@ final class BoardView: UIView {
         // TODO: make the board shake
     }
     
+    
+    // MARK: changing buttons
+    
+    func addMove(location: Position, type: PlayerOptions) {
+        switch type {
+        case .X:
+            switch location {
+            case (0, 0): image1.image = UIImage(named: "red-x")
+            case (0, 1): image2.image = UIImage(named: "red-x")
+            case (0, 2): image3.image = UIImage(named: "red-x")
+            case (1, 0): image4.image = UIImage(named: "red-x")
+            case (1, 1): image5.image = UIImage(named: "red-x")
+            case (1, 2): image6.image = UIImage(named: "red-x")
+            case (2, 0): image7.image = UIImage(named: "red-x")
+            case (2, 1): image8.image = UIImage(named: "red-x")
+            case (2, 2): image9.image = UIImage(named: "red-x")
+            default: fatalError("No other value may be passed.")
+        }
+        case .O:
+            switch location {
+            case (0, 0): image1.image = UIImage(named: "blue-o")
+            case (0, 1): image2.image = UIImage(named: "blue-o")
+            case (0, 2): image3.image = UIImage(named: "blue-o")
+            case (1, 0): image4.image = UIImage(named: "blue-o")
+            case (1, 1): image5.image = UIImage(named: "blue-o")
+            case (1, 2): image6.image = UIImage(named: "blue-o")
+            case (2, 0): image7.image = UIImage(named: "blue-o")
+            case (2, 1): image8.image = UIImage(named: "blue-o")
+            case (2, 2): image9.image = UIImage(named: "blue-o")
+            default: fatalError("No other value may be passed.")
+            }
+        case .None: fatalError("Move cannot be .None")
+        }
+    }
     
     // MARK: button method
     
@@ -62,4 +88,19 @@ final class BoardView: UIView {
             }
         }
     }
+    
+    
+    // MARK: View outlets
+    
+    @IBOutlet weak var boardImage: UIImageView!
+    
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image3: UIImageView!
+    @IBOutlet weak var image4: UIImageView!
+    @IBOutlet weak var image5: UIImageView!
+    @IBOutlet weak var image6: UIImageView!
+    @IBOutlet weak var image7: UIImageView!
+    @IBOutlet weak var image8: UIImageView!
+    @IBOutlet weak var image9: UIImageView!
 }

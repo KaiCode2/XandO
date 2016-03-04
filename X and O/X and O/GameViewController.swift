@@ -52,6 +52,7 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
         case .X:
             do {
                 try players?.playerX?.makeMove(index)
+                boardView.addMove(index, type: .X)
             } catch {
                 
             }
@@ -59,6 +60,7 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
         case .O:
             do {
                 try players?.playerO?.makeMove(index)
+                boardView.addMove(index, type: .O)
             } catch {
                 
             }
@@ -74,6 +76,8 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
     func winner(winner: PlayerOptions) {
         let winnerAlert = UIAlertView(title: "Winner!", message: "\(winner) won!", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "OK")
         winnerAlert.show()
+        boardView.userInteractionEnabled = false
+        backgroundView.state = .Home
     }
     
     // MARK: Back button

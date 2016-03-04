@@ -30,19 +30,10 @@ enum PlayError: ErrorType {
     case MoveTaken
 }
 
-class Player: NSObject, GKGameModelPlayer {
+class Player: NSObject {
     var board: Board
     let type: PlayerOptions
     
-    @objc var playerId: Int {
-        get{
-            switch type {
-            case .X: return 0
-            case .O: return 1
-            default: fatalError("Player.type cannot be None. Terminating.")
-            }
-        }
-    }
     
     init(board: Board, type: PlayerOptions) {
         self.board = board

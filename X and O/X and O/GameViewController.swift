@@ -33,8 +33,11 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
         if isSinglePlayer {
             strategist = GKMinmaxStrategist()
             
-            strategist?.maxLookAheadDepth = 3 // Remodel this to setting set up user
+            // TODO: Remodel this to setting set up user
+            strategist?.maxLookAheadDepth = 4 // look ahead includes both players therefore 4 is only two AI moves ahead
             strategist?.randomSource = GKARC4RandomSource()
+            strategist?.gameModel = board
+            print(strategist?.bestMoveForActivePlayer())
         }
         
         // backgroundView setup
@@ -68,13 +71,14 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
             } catch {
                 
             }
+            print(strategist?.bestMoveForPlayer(board.currentPlayer))
         case .O:
             do {
                 try players?.playerO.makeMove(index)
             } catch {
                 
             }
-            
+            print(strategist?.bestMoveForPlayer(board.currentPlayer))
         default:
             fatalError("there can be no None player")
         }

@@ -13,6 +13,7 @@ protocol PresenterType {
     func shouldDismiss()
 }
 
+@available(iOS 9.0, *)
 final class HomeViewController: UIViewController, PresenterType {
     
     @IBOutlet weak var backgroundView: BackgroundView!

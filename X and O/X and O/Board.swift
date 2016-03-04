@@ -41,19 +41,19 @@ class Board: NSObject {
     }
     
     //Used for initial optimization purposes
-    private var moveNumber = 0
+    internal var moveNumber = 0
     
     var delegate: BoardDelegate?
     
     func updateMovesFromBoard(oldBoard: Board) {
-        // TODO: merge oldBoard to the current board
-        
+        currentBoard = oldBoard.currentBoard
+        currentMove = oldBoard.currentMove
     }
     
     // Convert to:
     // private func checkForWinner(index: (Int, Int))
     // this will reduce the amount of checks required and will increase performance
-    private func checkForWinner() -> (Bool, Player?) {
+    func checkForWinner(index: Position? = nil) -> (Bool, Player?) {
         if delegate == nil {
             print("Delegate is nil therefore you will not be informed if a winner is found.")
         }

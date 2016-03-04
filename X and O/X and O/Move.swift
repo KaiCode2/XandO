@@ -11,11 +11,15 @@ import GameplayKit
 
 
 class Move: NSObject, GKGameModelUpdate {
-    var position: Position
+    final var position: Position
     var value: Int = 0
     
     init(position: Position) {
         self.position = position
         super.init()
     }
+    
+//    static func makeMove() {
+//        
+//    }
 }

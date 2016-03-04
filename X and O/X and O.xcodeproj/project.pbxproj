@@ -20,6 +20,7 @@
 		AC76B13D1C59C5B9001BD5F2 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC76B13C1C59C5B9001BD5F2 /* Move.swift */; };
 		ACBA48431C38498700010592 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBA48421C38498700010592 /* CoreMotion.framework */; };
 		ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */; };
+		ACDC72C81C7D4F770024E69B /* Player+GameModelPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC72C71C7D4F770024E69B /* Player+GameModelPlayer.swift */; };
 		ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */; };
 		ACEB00851BE1EA2B001182FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00831BE1EA2B001182FF /* Main.storyboard */; };
 		ACEB00871BE1EA2B001182FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEB00861BE1EA2B001182FF /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		AC76B13C1C59C5B9001BD5F2 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		ACBA48421C38498700010592 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		ACC5B76F1BF79067002A8405 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		ACDC72C71C7D4F770024E69B /* Player+GameModelPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Player+GameModelPlayer.swift"; sourceTree = "<group>"; };
 		ACEB007C1BE1EA2B001182FF /* X and O.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X and O.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEB007F1BE1EA2B001182FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACEB00841BE1EA2B001182FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				AC76B1391C59B6E6001BD5F2 /* Board+GameModel.swift */,
 				AC76B13C1C59C5B9001BD5F2 /* Move.swift */,
+				ACDC72C71C7D4F770024E69B /* Player+GameModelPlayer.swift */,
 			);
 			name = MinMax;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				AC2305521BEC875F00B74E16 /* BackgroundView.swift in Sources */,
 				AC40C3A51C11672400D716C7 /* Board.swift in Sources */,
 				ACEB00801BE1EA2B001182FF /* AppDelegate.swift in Sources */,
+				ACDC72C81C7D4F770024E69B /* Player+GameModelPlayer.swift in Sources */,
 				AC40C3A81C11679400D716C7 /* Player.swift in Sources */,
 				AC404F2F1C2E78C100AC9562 /* BoardView.swift in Sources */,
 				ACC5B7701BF79067002A8405 /* SettingsViewController.swift in Sources */,

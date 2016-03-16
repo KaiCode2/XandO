@@ -37,7 +37,7 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
             strategist?.maxLookAheadDepth = 4 // look ahead includes both players therefore 4 is only two AI moves ahead
             strategist?.randomSource = GKARC4RandomSource()
             strategist?.gameModel = board
-            print(strategist?.bestMoveForActivePlayer())
+            makeAIPlayerMove()
         }
         
         // backgroundView setup
@@ -58,6 +58,23 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+    
+    // Strategist Methods
+    
+    func makeAIPlayerMove() {
+        // TODO: dispatch to background thread
+        
+        let activePlayer = board.currentPlayer
+        let move = strategist?.bestMoveForPlayer(activePlayer) as? Move
+        
+        if move != nil {
+            do {
+                try activePlayer.makeMove(move!.position)
+            } catch { }
+        } else {
+            print("move is nil!!!")
+        }
     }
     
     

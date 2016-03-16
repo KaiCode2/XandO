@@ -12,7 +12,7 @@ import GameplayKit
 
 class Move: NSObject, GKGameModelUpdate {
     final var position: Position
-    var value: Int = 0
+    var value: Int = 0  // TODO: the value here needs to be changed
     
     init(position: Position) {
         self.position = position

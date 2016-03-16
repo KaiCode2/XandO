@@ -29,13 +29,13 @@ extension Board: GKGameModel, NSCopying {
         }
     }
     
-    @objc var players: [GKGameModelPlayer]? {
+    var players: [GKGameModelPlayer]? {
         get{
             return Players(board: self).all()
         }
     }
     
-    @objc var activePlayer: GKGameModelPlayer? {
+    var activePlayer: GKGameModelPlayer? {
         get{
             return currentPlayer
         }
@@ -44,11 +44,11 @@ extension Board: GKGameModel, NSCopying {
     
     // MARK: Minmax: Evaluate
     
-    @objc func gameModelUpdatesForPlayer(player: GKGameModelPlayer) -> [GKGameModelUpdate]? {
+    func gameModelUpdatesForPlayer(player: GKGameModelPlayer) -> [GKGameModelUpdate]? {
         return availibleMoves.map() { Move(position: $0) }
     }
     
-    @objc func scoreForPlayer(player: GKGameModelPlayer) -> Int {
+    func scoreForPlayer(player: GKGameModelPlayer) -> Int {
         
         /*
         Heuristic: The way a player's score is calculated is to sum of all the :
@@ -62,20 +62,44 @@ extension Board: GKGameModel, NSCopying {
             If there is an unobstructed path that can be expanded upon and can in turn lead to a victory the AI shall value that move very highly.
         4: Block opponent line segment (Move weight: 20)
             If opponent has the potential to create valueable line segments the AI shall value a counter move highly.
+        
+        DROP 5. Not valid.
         5: Winabillity (Move weight: 5N where N = potential wins)
             Certain positions have more ways in which they can form potential wins. The AI shall consider more versatile moves more valuable.
         
         
         */
         
+        if let gamePlayer = player as? Player {
+            var score = 0
+            
+            let moveChecker = MoveChecker()
+            
+            // CanWin
+            if moveChecker.canWin(self, player: gamePlayer.type) {
+                score += 10000
+            }
+            if moveChecker.canWin(self, player: gamePlayer.type.opposite()) {
+                score -= 10000
+            }
+            
+            // Block Build
+            if moveChecker.canBuild(self, player: gamePlayer.type) {
+                score += 25
+            }
+            if moveChecker.canBlock(self, player: gamePlayer.type) {
+                score += 20
+            }
+            
+            
+            
+            return score
+        }
         
-        var score = 0
-        
-        
-        return score
+        return 0
     }
     
-    @objc func isWinForPlayer(player: GKGameModelPlayer) -> Bool {
+    func isWinForPlayer(player: GKGameModelPlayer) -> Bool {
         if let gamePlayer = player as? Player {
             let winner = checkForWinner()
             
@@ -87,7 +111,7 @@ extension Board: GKGameModel, NSCopying {
         return false
     }
     
-    @objc func isLossForPlayer(player: GKGameModelPlayer) -> Bool {
+    func isLossForPlayer(player: GKGameModelPlayer) -> Bool {
         if let gamePlayer = player as? Player {
             let winner = checkForWinner()
             
@@ -101,7 +125,7 @@ extension Board: GKGameModel, NSCopying {
     
     // MARK: Minmax: Apply Moves
     
-    @objc func applyGameModelUpdate(gameModelUpdate: GKGameModelUpdate) {
+    func applyGameModelUpdate(gameModelUpdate: GKGameModelUpdate) {
         if let update = gameModelUpdate as? Move {
             print(update.position)
             do {
@@ -115,15 +139,33 @@ extension Board: GKGameModel, NSCopying {
     
     // MARK: Minmax: Copying Board State
     
-    @objc func setGameModel(gameModel: GKGameModel) {
+    func setGameModel(gameModel: GKGameModel) {
         if let board = gameModel as? Board {
             updateMovesFromBoard(board)
         }
     }
     
-    public func copyWithZone(zone: NSZone) -> AnyObject {
+    func copyWithZone(zone: NSZone) -> AnyObject {
         let copy = Board(delegate: self.delegate)
         copy.setGameModel(self)
         return copy
+    }
+}
+
+private class MoveChecker {
+    func canWin(board: Board, player: PlayerOptions) -> Bool {
+        return true
+    }
+    
+    private func checkDiagonal(board: Board, player: PlayerOptions) -> Bool {
+        return true
+    }
+    
+    func canBlock(board: Board, player: PlayerOptions) -> Bool {
+        return false
+    }
+    
+    func canBuild(board: Board, player: PlayerOptions) -> Bool {
+        return false
     }
 }

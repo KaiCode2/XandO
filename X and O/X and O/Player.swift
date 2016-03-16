@@ -24,6 +24,15 @@ enum PlayerOptions {
         case .None: break
         }
     }
+    
+    func opposite() -> PlayerOptions {
+        switch self {
+        case .X: return .O
+        case .O: return .X
+        case .None: break
+        }
+        fatalError("Cannot get here.")
+    }
 }
 
 enum PlayError: ErrorType {

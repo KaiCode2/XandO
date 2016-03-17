@@ -154,18 +154,22 @@ extension Board: GKGameModel, NSCopying {
 
 private class MoveChecker {
     func canWin(board: Board, player: PlayerOptions) -> Bool {
+        // TODO: implement
         return true
     }
     
     private func checkDiagonal(board: Board, player: PlayerOptions) -> Bool {
+        // TODO: implement
         return true
     }
     
     func canBlock(board: Board, player: PlayerOptions) -> Bool {
+        // TODO: implement
         return false
     }
     
     func canBuild(board: Board, player: PlayerOptions) -> Bool {
+        // TODO: implement
         return false
     }
 }

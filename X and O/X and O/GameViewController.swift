@@ -88,14 +88,14 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
             } catch {
                 
             }
-            print(strategist?.bestMoveForPlayer(board.currentPlayer))
+            makeAIPlayerMove()
         case .O:
             do {
                 try players?.playerO.makeMove(index)
             } catch {
                 
             }
-            print(strategist?.bestMoveForPlayer(board.currentPlayer))
+            makeAIPlayerMove()
         default:
             fatalError("there can be no None player")
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
+class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var backgroundView: BackgroundView!
     @IBOutlet weak var boardView: BoardView!
     
@@ -83,8 +83,19 @@ class GameViewController: UIViewController, BoardViewDelegate, BoardDelegate {
     // MARK: Back button
     
     @IBAction func dismissGame(sender: AnyObject) {
-        if let pres = presenter {
-            pres.shouldDismiss()
+        let homeVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier(NSStringFromClass(HomeViewController)) as? HomeViewController
+        
+        guard (homeVC != nil) else {
+            fatalError("\(NSStringFromClass(HomeViewController)): is nil, terminating in file: \(self)")
         }
+        
+        homeVC?.transitioningDelegate = self
+        presentViewController(homeVC!, animated: true, completion: nil)
+    }
+    
+    // MARK: UIViewControllerTransitioningDelegate methods
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return presentGameTransition()
     }
 }

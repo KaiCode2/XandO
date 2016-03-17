@@ -13,7 +13,7 @@ protocol PresenterType {
     func shouldDismiss()
 }
 
-final class HomeViewController: UIViewController, PresenterType {
+final class HomeViewController: UIViewController, PresenterType, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var backgroundView: BackgroundView!
     
@@ -42,8 +42,7 @@ final class HomeViewController: UIViewController, PresenterType {
             fatalError("\(NSStringFromClass(GameViewController)): is nil, terminating in file: \(self)")
         }
         
-        gameVC?.presenter = self
-        
+        gameVC?.transitioningDelegate = self
         presentViewController(gameVC!, animated: true, completion: nil)
     }
     
@@ -63,5 +62,11 @@ final class HomeViewController: UIViewController, PresenterType {
     
     func shouldDismiss() {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    //MARK: UIViewControllerTransitioningDelegate methods
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return presentGameTransition()
     }
 }
